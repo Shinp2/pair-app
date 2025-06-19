@@ -1,0 +1,254 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\shinp\\source\\repos\\osero\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\shinp\\source\\repos\\osero\\gitignore .gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:gitignore .gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|C:\\Users\\shinp\\source\\repos\\osero\\osero\\OseroGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|solutionrelative:osero\\OseroGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|C:\\Users\\shinp\\source\\repos\\osero\\osero\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|solutionrelative:osero\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|C:\\Users\\shinp\\source\\repos\\osero\\osero\\Board.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|solutionrelative:osero\\Board.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|C:\\Users\\shinp\\source\\repos\\osero\\osero\\OseroGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|solutionrelative:osero\\OseroGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|C:\\Users\\shinp\\source\\repos\\osero\\osero\\Board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|solutionrelative:osero\\Board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|C:\\Users\\shinp\\source\\repos\\osero\\osero\\Human.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|solutionrelative:osero\\Human.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|C:\\Users\\shinp\\source\\repos\\osero\\osero\\Human.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|solutionrelative:osero\\Human.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|C:\\Users\\shinp\\source\\repos\\osero\\osero\\Ai.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|solutionrelative:osero\\Ai.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|C:\\Users\\shinp\\source\\repos\\osero\\osero\\Ai.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|solutionrelative:osero\\Ai.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|C:\\Users\\shinp\\source\\repos\\osero\\osero\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|solutionrelative:osero\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|C:\\Users\\shinp\\source\\repos\\osero\\osero\\JsonOut.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|solutionrelative:osero\\JsonOut.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|C:\\Users\\shinp\\source\\repos\\osero\\osero\\UiOut.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{049EEBFA-0FD0-40DA-9DFB-5CEA5AC206C5}|osero\\osero.vcxproj|solutionrelative:osero\\UiOut.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "gitignore .gitignore",
+              "DocumentMoniker": "C:\\Users\\shinp\\source\\repos\\osero\\gitignore .gitignore",
+              "RelativeDocumentMoniker": "gitignore .gitignore",
+              "ToolTip": "C:\\Users\\shinp\\source\\repos\\osero\\gitignore .gitignore",
+              "RelativeToolTip": "gitignore .gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-19T15:11:58.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Human.cpp",
+              "DocumentMoniker": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\Human.cpp",
+              "RelativeDocumentMoniker": "osero\\Human.cpp",
+              "ToolTip": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\Human.cpp",
+              "RelativeToolTip": "osero\\Human.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-18T09:18:21.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Board.cpp",
+              "DocumentMoniker": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\Board.cpp",
+              "RelativeDocumentMoniker": "osero\\Board.cpp",
+              "ToolTip": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\Board.cpp",
+              "RelativeToolTip": "osero\\Board.cpp",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAACMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-18T08:43:13.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Human.h",
+              "DocumentMoniker": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\Human.h",
+              "RelativeDocumentMoniker": "osero\\Human.h",
+              "ToolTip": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\Human.h",
+              "RelativeToolTip": "osero\\Human.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-18T08:27:03.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Ai.h",
+              "DocumentMoniker": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\Ai.h",
+              "RelativeDocumentMoniker": "osero\\Ai.h",
+              "ToolTip": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\Ai.h",
+              "RelativeToolTip": "osero\\Ai.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-18T08:26:52.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Player.h",
+              "DocumentMoniker": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\Player.h",
+              "RelativeDocumentMoniker": "osero\\Player.h",
+              "ToolTip": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\Player.h",
+              "RelativeToolTip": "osero\\Player.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-18T08:25:50.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Board.h",
+              "DocumentMoniker": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\Board.h",
+              "RelativeDocumentMoniker": "osero\\Board.h",
+              "ToolTip": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\Board.h",
+              "RelativeToolTip": "osero\\Board.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-18T08:25:40.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OseroGame.cpp",
+              "DocumentMoniker": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\OseroGame.cpp",
+              "RelativeDocumentMoniker": "osero\\OseroGame.cpp",
+              "ToolTip": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\OseroGame.cpp",
+              "RelativeToolTip": "osero\\OseroGame.cpp",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-19T01:02:15.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OseroGame.h",
+              "DocumentMoniker": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\OseroGame.h",
+              "RelativeDocumentMoniker": "osero\\OseroGame.h",
+              "ToolTip": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\OseroGame.h",
+              "RelativeToolTip": "osero\\OseroGame.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-18T08:26:00.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Ai.cpp",
+              "DocumentMoniker": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\Ai.cpp",
+              "RelativeDocumentMoniker": "osero\\Ai.cpp",
+              "ToolTip": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\Ai.cpp",
+              "RelativeToolTip": "osero\\Ai.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-18T09:17:08.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "JsonOut.h",
+              "DocumentMoniker": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\JsonOut.h",
+              "RelativeDocumentMoniker": "osero\\JsonOut.h",
+              "ToolTip": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\JsonOut.h",
+              "RelativeToolTip": "osero\\JsonOut.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-18T08:26:40.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Player.cpp",
+              "DocumentMoniker": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\Player.cpp",
+              "RelativeDocumentMoniker": "osero\\Player.cpp",
+              "ToolTip": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\Player.cpp",
+              "RelativeToolTip": "osero\\Player.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-18T09:07:52.865Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UiOut.h",
+              "DocumentMoniker": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\UiOut.h",
+              "RelativeDocumentMoniker": "osero\\UiOut.h",
+              "ToolTip": "C:\\Users\\shinp\\source\\repos\\osero\\osero\\UiOut.h",
+              "RelativeToolTip": "osero\\UiOut.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-18T08:26:24.359Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
