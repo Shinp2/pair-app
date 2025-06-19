@@ -1,7 +1,9 @@
 #include "Player.h"
+#include "json.hpp" 
+
 class Human :
     public Player
 {
 public:
-    std::pair<int, int> getMove(const Board& board) override;
+    std::pair<int, int> getMove( Board& board) override;
 };

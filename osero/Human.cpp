@@ -1,8 +1,10 @@
 
 #include "Human.h"
 
-std::pair<int, int> Human::getMove(const Board& board)
+std::pair<int, int> Human::getMove(Board& board)
 {
-	// TODO: ‚±‚±‚ÉÀ‘•ƒR[ƒh‚ğ’Ç‰Á‚µ‚Ü‚·.
+	int row, col;
+
+	board.placeStone(row, col, this->playerColor);
 	return std::pair<int, int>();
 }
