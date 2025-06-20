@@ -17,6 +17,7 @@ bool Board::isLegalMove(int row, int col, int playerType)
     // playerType: BLACK or WHITE
     std::vector<std::pair<int, int>> legalMoves;
     int opponent = (playerType == osero::BLACK) ? osero::WHITE : osero::BLACK;
+    // 8方向の探索
     for (int dir = 0; dir < 8; ++dir) {
         int nx = row + dx[dir];
         int ny = col + dy[dir];
@@ -24,21 +25,22 @@ bool Board::isLegalMove(int row, int col, int playerType)
 
 
         while (nx >= 0 && nx < board.size() && ny >= 0 && ny < board.size()) {
+			// 違う色を見つけた場合
             if (board[nx][ny] == opponent) {
                 foundOpponent = true;
                 nx += dx[dir];
                 ny += dy[dir];
             }
+            // 違う色を見つけた後に同じ色を見つけた場合Trueを返す
             else if (board[nx][ny] == playerType && foundOpponent) {
                 return true;
             }
+            // 空のマスを見つけた場合
             else {
                 break;
             }
         }
     }
-    return false;
-    // 指定位置に石を置けるか判定
     return false;
 }
 

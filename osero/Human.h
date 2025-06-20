@@ -5,5 +5,8 @@ class Human :
     public Player
 {
 public:
-    std::pair<int, int> getMove( Board& board) override;
+    bool getMove(Board& board) override;
+    void setLastMove(const std::pair<int, int>& move); 
+private:
+    std::pair<int, int> lastMove;
 };

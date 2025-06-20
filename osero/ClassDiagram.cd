@@ -3,21 +3,21 @@
   <Class Name="Ai" Collapsed="true">
     <Position X="7.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAEACAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAABAAAAAAAEAKAgASAAAAAIAAAAAAAIAgAAAgAAAAA=</HashCode>
       <FileName>Ai.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Board">
-    <Position X="12.25" Y="2.75" Width="1.5" />
+  <Class Name="Board" Collapsed="true">
+    <Position X="11.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEAAAEAABAAIAAEAAIQIAAAAAAAAAABAIAAEACAABAA=</HashCode>
+      <HashCode>AEAAAEAABAAIAAEAAIQIAAAAAAAAAABAIAgEACAABAA=</HashCode>
       <FileName>Board.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Human" Collapsed="true">
     <Position X="9.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAgAACAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
       <FileName>Human.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -31,14 +31,14 @@
   <Class Name="OseroGame" Collapsed="true">
     <Position X="8.25" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>wAAAAAAAAAAAAAAgAAAAAAAAAQAAAEAAIBAgAAAAAAA=</HashCode>
+      <HashCode>yAAAAAgAAAASAAAgAAAAAAAAAQAAAEACIBAgAAAAAAA=</HashCode>
       <FileName>OseroGame.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Player" Collapsed="true">
     <Position X="8.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAACAAAAAgQAAABA=</HashCode>
+      <HashCode>AAAAAAAAAAAAACAAAAgAAAAAAAAAAAAAAAAAgQAAABA=</HashCode>
       <FileName>Player.h</FileName>
     </TypeIdentifier>
   </Class>

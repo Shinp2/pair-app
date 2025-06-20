@@ -25,7 +25,10 @@ bool JsonIO::loadFromJsonForm()
         int col = item["position"][1];
 		positions.push_back({ playerType, {row, col} });
     }
-
+    if (j.contains("move")) {
+		lastMove = j["move"];		
+        hasLastMove = true;
+    }
     // ボードサイズや初期配置を JSON から取得
     if (j.contains("boardSize")) {
         this->size = j["boardSize"];	
@@ -33,7 +36,9 @@ bool JsonIO::loadFromJsonForm()
     else {
 		size = 8; // デフォルトのボードサイズ
     }
+
     board = std::make_unique<Board>(size, positions); // 初期配置を設定
+    
     return true;
 }
 

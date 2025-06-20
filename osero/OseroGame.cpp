@@ -3,18 +3,25 @@
 
 OseroGame::OseroGame(int size)  
 	: player1(std::make_unique<Human>(osero::BLACK)),
-      player2(std::make_unique<Player>(osero::WHITE)), 
-      board(size)  
+      player2(std::make_unique<Human>(osero::WHITE)), 
+      board(std::make_unique<Board>(size))
 {  
 	// コンストラクタの初期化リストでメンバ変数を初期化
 }
 
-OseroGame::OseroGame(std::unique_ptr<Board> boardPtr)
+// JSONからの初期化を行うコンストラクタ
+// Webブラウザ1手毎に呼び出すことを想定しplayer1はHumanとして初期化し、player2はAiとして初期化
+// GameOsero内では１手分のみ処理を行う
+OseroGame::OseroGame(JsonIO json)
     : player1(std::make_unique<Human>(osero::BLACK)),
-    player2(std::make_unique<Player>(osero::WHITE)),
-    board(std::move(boardPtr))
+    player2(std::make_unique<Ai>(osero::WHITE)),
+    board(std::move(json.board))
 {  
-    // デフォルトのボードサイズで初期化
+
+    if (json.hasLastMoveSet()) {
+        static_cast<Human*>(player1.get())->setLastMove(json.getLastMove());
+    }
+	// unique_ptrを使用してBoardオブジェクトを受け取るコンストラクタ
 }
 
 void OseroGame::start()
@@ -35,17 +42,17 @@ void OseroGame::endGame()
 int OseroGame::checkGameOver()  
 {  
     
-    const int size = board.sizeOfBoard(); 
+    const int size = board->sizeOfBoard(); 
 	int currentPlayer = this->currentPlayerPtr->getColor(); // 現在のプレイヤーの色を取得
 	int oppositePlayer = (currentPlayer == osero::BLACK) ? osero::WHITE : osero::BLACK;
 	unsigned char continueFlag = 0; // 続行フラグを初期化
 
     for (int row = 0; row < size; ++row) {  
         for (int col = 0; col < size; ++col) {  
-            if (board.getCell(row,col) == osero::NONE && board.isLegalMove(row, col, currentPlayer)) {
+            if (board->getCell(row,col) == osero::NONE && board->isLegalMove(row, col, currentPlayer)) {
                 return 1; //設置できるため続行 
             }  
-            else if (board.getCell(row, col) == osero::NONE && board.isLegalMove(row, col, oppositePlayer)) {
+            else if (board->getCell(row, col) == osero::NONE && board->isLegalMove(row, col, oppositePlayer)) {
 				continueFlag = 1; // 相手の手番で設置可能な場所があるため続行フラグを立てる
                 continue;
             }
@@ -65,15 +72,13 @@ int OseroGame::checkGameOver()
 void OseroGame::goGame()
 {
     try {
-        //盤面出力処理をここに記述
-        int row, col;
         currentPlayerPtr = this->player1.get(); // 初期プレイヤーを設定
         while (this->checkGameOver()) {
             
             if (std::cin.fail()) {
                 throw std::runtime_error("Invalid input. Please enter two integers for row and column.");
             }
-            currentPlayerPtr->getMove(row, col);
+            currentPlayerPtr->getMove(*board);
 			// 盤面の状態を表示する処理をここに記述
         }
     }

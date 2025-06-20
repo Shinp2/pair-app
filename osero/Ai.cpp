@@ -2,10 +2,10 @@
 #include "Ai.h"
 
 
-std::pair<int, int> Ai::getMove(const Board& board)
+bool Ai::getMove(Board& board)
 {
     // TODO: ‚±‚±‚ÉÀ‘•ƒR[ƒh‚ğ’Ç‰Á‚µ‚Ü‚·.
-    return std::pair<int, int>();
+    return false;
 }
 
 int Ai::minimax(int depth, bool maximizingPlayer, int turnPlayer, int evalPlayerType)
