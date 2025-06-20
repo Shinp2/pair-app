@@ -1,5 +1,6 @@
 #pragma once
 #include "common.h"
+
 class Board
 {
 private:
@@ -10,9 +11,12 @@ protected:
 	std::vector<std::vector<int>> board;
 	const int size;
 public:
-	Board(int size = 8) : size(size) {
-		board.resize(size, std::vector<int>(size, osero::NONE));
+	Board(int _size = 8) : size(_size) {
+		board.resize(_size, std::vector<int>(size, osero::NONE));
 	}
+	
+	Board(int _size, Positions positions);
+
 	int sizeOfBoard() const { return size; }
 	bool isLegalMove(int row, int col, int playerType);
 	// Î‚ğ’u‚«A— •Ô‚µˆ—‚às‚¤

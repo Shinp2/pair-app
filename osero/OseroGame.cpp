@@ -8,6 +8,15 @@ OseroGame::OseroGame(int size)
 {  
 	// コンストラクタの初期化リストでメンバ変数を初期化
 }
+
+OseroGame::OseroGame(std::unique_ptr<Board> boardPtr)
+    : player1(std::make_unique<Human>(osero::BLACK)),
+    player2(std::make_unique<Player>(osero::WHITE)),
+    board(std::move(boardPtr))
+{  
+    // デフォルトのボードサイズで初期化
+}
+
 void OseroGame::start()
 {
 	// TODO: ここに実装コードを追加します.

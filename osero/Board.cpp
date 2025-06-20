@@ -1,6 +1,16 @@
 
 #include "Board.h"
 
+//positionsを使用して、初期配置を設定する
+Board::Board(int _size, Positions positions):size(_size) {  
+    board.resize(_size, std::vector<int>(size, osero::NONE));  
+    for (const auto& pos : positions) {  
+        int playerType = std::get<0>(pos);  
+        int row = std::get<1>(pos).first;  
+        int col = std::get<1>(pos).second;  
+        board[row][col] = playerType;  
+    }  
+}
 
 bool Board::isLegalMove(int row, int col, int playerType)
 {

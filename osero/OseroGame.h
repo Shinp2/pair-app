@@ -3,6 +3,7 @@
 #include "Ai.h"
 #include "Human.h"
 #include "Board.h"
+#include "JsonIO.h"
 #include <memory>
 
 class OseroGame
@@ -13,14 +14,16 @@ protected:
 	std::unique_ptr<Player> player1;
 	std::unique_ptr<Player> player2;
 	Player* currentPlayerPtr;
-	Board board;
+	std::unique_ptr<Board> board;
+	JsonIO jsonIO;
 	void changePlayer();
 	void endGame();
 public:
-	OseroGame::OseroGame(int size);
-	OseroGame::OseroGame(int size,int side);
+	OseroGame(int size);
+	OseroGame(std::unique_ptr<Board> boardPtr);
+
 	int checkGameOver();
 	void start();
-
 	void goGame();
+	bool loadFromJsonForm();
 };
