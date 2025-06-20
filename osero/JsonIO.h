@@ -11,6 +11,7 @@ protected:
 	int size = BOARD_SIZE_INI;
 	std::pair<int, int> lastMove;
 	bool hasLastMove = false;
+	bool hasFlipFlag = false;
 public:
 	JsonIO();
 	JsonIO(const JsonIO& other);

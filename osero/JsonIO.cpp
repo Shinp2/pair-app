@@ -35,6 +35,7 @@ bool JsonIO::loadFromJsonForm()
             positions.push_back({ playerType, {row, col} });
         }
     }
+
     if (j.contains("move")) {
 		lastMove = j["move"];		
         hasLastMove = true;
@@ -49,6 +50,15 @@ bool JsonIO::loadFromJsonForm()
 
     board = std::make_unique<Board>(size, positions); // ‰Šú”z’u‚ðÝ’è
     
+    if (j.contains("flip")) {
+        for(const auto& item : j["flip"]) {
+            int row = item[0];
+            int col = item[1];
+            board->flipDisks(row, col);
+		}
+		
+    }
+
     return true;
 }
 
