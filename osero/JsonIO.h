@@ -13,9 +13,10 @@ protected:
 	bool hasLastMove = false;
 public:
 	JsonIO();
+	JsonIO(const JsonIO& other);
 	std::unique_ptr<Board> board;
 	bool loadFromJsonForm();
-	int EmitJsonForm();
+	int EmitJsonForm(Board& board, int endFlag);
 	bool hasLastMoveSet() const { return hasLastMove; }
 	std::pair<int, int> getLastMove() const { return lastMove; }
 };

@@ -17,7 +17,7 @@
   <Class Name="Human" Collapsed="true">
     <Position X="9.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAgAACAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAgAACAAAAAAAAAAAAAAAAACAAAAAAQAAAA=</HashCode>
       <FileName>Human.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -31,7 +31,7 @@
   <Class Name="OseroGame" Collapsed="true">
     <Position X="8.25" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>yAAAAAgAAAASAAAgAAAAAAAAAQAAAEACIBAgAAAAAAA=</HashCode>
+      <HashCode>yACAAAgAEAASAAAgAAAAAAEAAQAAAEACIBAAAAAAAAA=</HashCode>
       <FileName>OseroGame.h</FileName>
     </TypeIdentifier>
   </Class>

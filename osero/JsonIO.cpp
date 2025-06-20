@@ -6,6 +6,13 @@ JsonIO::JsonIO()
 {
 	loadFromJsonForm();
 }
+JsonIO::JsonIO(const JsonIO& other)
+    : size(other.size),
+    lastMove(other.lastMove),
+    hasLastMove(other.hasLastMove),
+    board(other.board ? std::make_unique<Board>(*other.board) : nullptr) // `board` のコピーを作成
+{
+}
 
 bool JsonIO::loadFromJsonForm()
 {
@@ -19,11 +26,14 @@ bool JsonIO::loadFromJsonForm()
         std::cerr << "Error reading JSON from stdin: " << e.what() << std::endl;
         return false;
     }
-    for (const auto& item : j) {
-        int playerType = item["player"];
-        int row = item["position"][0];
-        int col = item["position"][1];
-		positions.push_back({ playerType, {row, col} });
+    // "board"配列からplayerとpositionを取得
+    if (j.contains("board")) {
+        for (const auto& item : j["board"]) {
+            int playerType = item["player"];
+            int row = item["position"][0];
+            int col = item["position"][1];
+            positions.push_back({ playerType, {row, col} });
+        }
     }
     if (j.contains("move")) {
 		lastMove = j["move"];		
@@ -42,52 +52,22 @@ bool JsonIO::loadFromJsonForm()
     return true;
 }
 
-int JsonIO::EmitJsonForm()
+int JsonIO::EmitJsonForm(Board& board,int endFlag)
 {
-    
+    json j = json::object();
+	osero::PlayerColor color = osero::NONE;
+    for (int row = 0; row < board.sizeOfBoard(); ++row) {
+        for (int col = 0; col < board.sizeOfBoard(); ++col) {
+			color = (osero::PlayerColor)board.getCell(row, col);
+            if (color != osero::NONE) {
+                j.push_back({ {"player", (int)color}, {"position", {row, col}} });
+            }
+        }
+    }
+	json outputFormat = json::object();
+	outputFormat["board"] = j;
+	outputFormat["endFlag"] = endFlag;
+    std::cout << outputFormat;
     return 0;
 }
 
-try {
-    json j = json::parse(input);
-    for (const auto& item : j) {
-        int playerType = item["player"];
-        int row = item["position"][0];
-        int col = item["position"][1];
-        positions.push_back({ playerType, {row, col} });
-    }
-}
-catch (const json::parse_error& e) {
-    std::cerr << "JSON parse error: " << e.what() << std::endl;
-    return 1;
-}
-catch (const std::exception& e) {
-    std::cerr << "Error: " << e.what() << std::endl;
-    return 1;
-}
-game.placeDisks(positions); // Place initial disks
-
-std::string input2;
-std::getline(std::cin, input2);
-int row = 0, col = 0;
-try {
-    json j2 = json::parse(input2);
-    if (j2.size() != 2) {
-        std::cerr << "Invalid input format. Expected a single dict object." << std::endl;
-        return 1;
-    }
-    int playerType = j2["player"];
-    row = j2["position"][0];
-    col = j2["position"][1];
-    game.changePlayer(playerType);
-    game.makeMove(row, col); // Make the move
-
-}
-catch (const json::parse_error& e) {
-    std::cerr << "JSON parse error: " << e.what() << std::endl;
-    return 1;
-}
-catch (const std::exception& e) {
-    std::cerr << "Error: " << e.what() << std::endl;
-    return 1;
-}

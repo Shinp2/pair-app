@@ -35,7 +35,6 @@
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="Human.cpp" />
     <ClCompile Include="JsonIO.cpp" />
-    <ClCompile Include="JsonOut.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="OseroGame.cpp" />
     <ClCompile Include="Player.cpp" />

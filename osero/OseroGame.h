@@ -9,7 +9,6 @@
 class OseroGame
 {
 private:
-	osero::GameState gameState = osero::GameState::RUNNING;
 	//JsonIO ‚Åó‚¯æ‚Á‚½lastMove‚ğˆê“I‚É•Û,Player class‚É“n‚·‚½‚ß‚Ég—p
 	std::pair<int, int> lastMove;
 protected:
@@ -23,9 +22,11 @@ protected:
 public:
 	OseroGame(int size);
 	OseroGame(JsonIO json);
-
 	int checkGameOver();
 	void start();
 	void goGame();
 	bool loadFromJsonForm();
+	void sendJsonForm();
+	void singleRun();
+	Board* getBoard() { return board.get(); }
 };

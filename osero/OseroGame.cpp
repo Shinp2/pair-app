@@ -17,16 +17,24 @@ OseroGame::OseroGame(JsonIO json)
     player2(std::make_unique<Ai>(osero::WHITE)),
     board(std::move(json.board))
 {  
-
     if (json.hasLastMoveSet()) {
         static_cast<Human*>(player1.get())->setLastMove(json.getLastMove());
+
     }
 	// unique_ptrを使用してBoardオブジェクトを受け取るコンストラクタ
 }
 
 void OseroGame::start()
 {
-	// TODO: ここに実装コードを追加します.
+	int centerRow = board->sizeOfBoard() / 2 - 1;
+	int centerCol = board->sizeOfBoard() / 2 - 1;
+    // 初期配置を設定
+    board->setCell(centerRow, centerCol, osero::WHITE);
+    board->setCell(centerRow + 1, centerCol + 1, osero::WHITE);
+    board->setCell(centerRow, centerCol + 1, osero::BLACK);
+    board->setCell(centerRow + 1, centerCol, osero::BLACK);
+    
+    // ゲーム開始のメッセージを表示
 }
 
 void OseroGame::changePlayer()
@@ -39,9 +47,10 @@ void OseroGame::endGame()
 	// TODO: ここに実装コードを追加します.
 }
 
+// ゲームオーバーのチェックを行う関数
+// BoardクラスとPlayerクラスを使用して、盤面の状態を確認し、合法手があるかどうかを判断します
 int OseroGame::checkGameOver()  
 {  
-    
     const int size = board->sizeOfBoard(); 
 	int currentPlayer = this->currentPlayerPtr->getColor(); // 現在のプレイヤーの色を取得
 	int oppositePlayer = (currentPlayer == osero::BLACK) ? osero::WHITE : osero::BLACK;
@@ -69,16 +78,32 @@ int OseroGame::checkGameOver()
 
 }
 
+void OseroGame::sendJsonForm() {
+	JsonIO json;
+	json.EmitJsonForm(*board,checkGameOver());
+}
+
+// 交互に１手ずつ実行する関数
+void OseroGame::singleRun() {
+    JsonIO json;
+    currentPlayerPtr = player1.get(); // 初期プレイヤー(Human)を設定
+    for(int i=0;i<2;i++) { // 2手分の処理を行う
+        if (!this->checkGameOver()) {
+            break; // ゲームオーバーならループを抜ける
+        }
+        currentPlayerPtr->getMove(*board);
+        changePlayer(); // プレイヤーを交代
+	}
+};
+
+
 void OseroGame::goGame()
 {
     try {
         currentPlayerPtr = this->player1.get(); // 初期プレイヤーを設定
         while (this->checkGameOver()) {
-            
-            if (std::cin.fail()) {
-                throw std::runtime_error("Invalid input. Please enter two integers for row and column.");
-            }
             currentPlayerPtr->getMove(*board);
+			changePlayer(); // プレイヤーを交代
 			// 盤面の状態を表示する処理をここに記述
         }
     }
