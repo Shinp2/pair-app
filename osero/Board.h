@@ -4,7 +4,7 @@
 class Board
 {
 private:
-	const int  = { -1, -1, -1, 0, 1, 1, 1, 0 };
+	const int  dx[8] = {-1, -1, -1, 0, 1, 1, 1, 0};
 	const int dy[8] = { -1, 0, 1, 1, 1, 0, -1, -1 };
 
 protected:

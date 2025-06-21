@@ -11,13 +11,13 @@ protected:
     const int EDGE_WEIGHT = 500;
     const int CENTER_WEIGHT = 300;
     // 盤面の評価関数
-    int evaluateCorner(const Board& board, int playerType);
-    int evaluateEdge(const Board& board, int playerType);
-	int evaluateCenter(const Board& board, int playerType);
+    int evaluateCorner(Board& board, int playerType);
+    int evaluateEdge(Board& board, int playerType);
+	int evaluateCenter(Board& board, int playerType);
 public:
     Ai(int color) : Player(color) {}; // コンストラクタを追加
     bool getMove(Board& board) override; // 修正: 基底クラスの関数シグネチャに一致させる
-    int minimax(Board& board, int depth, bool maximizingPlayer, int turnPlayer, int evalPlayerType);
+    int minimax(Board& board, int depth, bool maximizingPlayer, int turnPlayer, int evalPlayerType, int alpha, int beta);
     // 盤面を評価
-    int evaluateBoard(Board& board);
+    int evaluateBoard(Board& board,int playerType);
 }; 
