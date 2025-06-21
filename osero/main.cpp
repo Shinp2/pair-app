@@ -21,7 +21,10 @@ int main(int argc, char** argv) {
 		}
 	}
 	// jsonå`éÆÇ≈éÛÇØéÊÇ¡ÇΩèÍçá
+
 	JsonIO json;
+	json.loadFromJsonForm();
+	
 	OseroGame game(json);
 	if (flag == 1) {
 		game.sendJsonForm();
@@ -30,6 +33,5 @@ int main(int argc, char** argv) {
 		game.singleRun();
 		game.sendJsonForm();
 	}
-
 	return 0;
 }

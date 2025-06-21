@@ -15,6 +15,7 @@ protected:
 public:
 	JsonIO();
 	JsonIO(const JsonIO& other);
+	std::string removeNewlines(const std::string& input);
 	std::unique_ptr<Board> board;
 	bool loadFromJsonForm();
 	int EmitJsonForm(Board& board, int endFlag);

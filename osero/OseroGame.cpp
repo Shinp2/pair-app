@@ -18,8 +18,9 @@ OseroGame::OseroGame(JsonIO json)
     board(std::move(json.board))
 {  
     if (json.hasLastMoveSet()) {
+		currentPlayerPtr = player1.get(); // 初期プレイヤーをHumanに設定
         static_cast<Human*>(player1.get())->setLastMove(json.getLastMove());
-
+		
     }
 	// unique_ptrを使用してBoardオブジェクトを受け取るコンストラクタ
 }

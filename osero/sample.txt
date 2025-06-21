@@ -1,0 +1,10 @@
+
+{
+  "board": [
+    { "player": 1, "position": [0, 0] },
+    { "player": 2, "position": [0, 1] }
+  ],
+  "move": [2, 3],
+  "boardSize": 8,
+  "flip": [ [2, 3], [2, 4] ]
+}

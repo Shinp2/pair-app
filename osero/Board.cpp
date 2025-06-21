@@ -91,6 +91,7 @@ void Board::clear()
 // 石を置く処理と裏返し処理を行う
 void Board::flipDisks(int row, int col, int playerType)
 {
+    lastFlippedPositions.clear(); // 前回分をクリア
     int opponent = (playerType == osero::BLACK) ? osero::WHITE : osero::BLACK;
 
     for (int dir = 0; dir < 8; ++dir) {
@@ -107,6 +108,7 @@ void Board::flipDisks(int row, int col, int playerType)
         if (nx >= 0 && nx < board[0].size() && ny >= 0 && ny < board.size() && board[nx][ny] == playerType) {
             for (auto p : toFlip) {
                 board[p.first][p.second] = playerType;
+                lastFlippedPositions.push_back(p); // 裏返した位置を記録
             }
         }
     }

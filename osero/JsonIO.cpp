@@ -1,10 +1,7 @@
 #include "JsonIO.h"
 
-using json = nlohmann::json;
-
 JsonIO::JsonIO()
 {
-	loadFromJsonForm();
 }
 JsonIO::JsonIO(const JsonIO& other)
     : size(other.size),
@@ -17,8 +14,12 @@ JsonIO::JsonIO(const JsonIO& other)
 bool JsonIO::loadFromJsonForm()
 {
 	Positions positions;
-    std::string input((std::istreambuf_iterator<char>(std::cin)), std::istreambuf_iterator<char>());
-    json j;
+    std::string input(
+        (std::istreambuf_iterator<char>(std::cin)),
+        std::istreambuf_iterator<char>()
+    );
+    json j = json::object();;
+
     try {
         j = json::parse(input);
     }
@@ -26,6 +27,8 @@ bool JsonIO::loadFromJsonForm()
         std::cerr << "Error reading JSON from stdin: " << e.what() << std::endl;
         return false;
     }
+    
+
     // "board"”z—ñ‚©‚çplayer‚Æposition‚ðŽæ“¾
     if (j.contains("board")) {
         for (const auto& item : j["board"]) {
@@ -64,7 +67,7 @@ bool JsonIO::loadFromJsonForm()
 
 int JsonIO::EmitJsonForm(Board& board,int endFlag)
 {
-    json j = json::object();
+    json j = json::array();
 	osero::PlayerColor color = osero::NONE;
     for (int row = 0; row < board.sizeOfBoard(); ++row) {
         for (int col = 0; col < board.sizeOfBoard(); ++col) {
@@ -74,8 +77,14 @@ int JsonIO::EmitJsonForm(Board& board,int endFlag)
             }
         }
     }
+    // lastFlippedPositions‚ðJSON”z—ñ‚É•ÏŠ·
+    json flips = json::array();
+    for (const auto& pos : board.getLastFlippedPositions()) {
+        flips.push_back({ pos.first, pos.second });
+    }
 	json outputFormat = json::object();
 	outputFormat["board"] = j;
+    outputFormat["flips"] = flips;
 	outputFormat["endFlag"] = endFlag;
     std::cout << outputFormat;
     return 0;

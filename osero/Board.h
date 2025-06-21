@@ -10,6 +10,8 @@ private:
 protected:
 	std::vector<std::vector<int>> board;
 	const int size;
+	std::vector<std::pair<int, int>> lastFlippedPositions; // ’¼‹ß‚Ì— •Ô‚µˆÊ’u
+
 public:
 	Board(int _size = 8) : size(_size) {
 		board.resize(_size, std::vector<int>(size, osero::NONE));
@@ -23,6 +25,7 @@ public:
 	void placeStone(int row, int col, int color);
 	std::vector<std::pair<int, int>> getLegalMoves(int color);
 	int countStones(int color);
+    std::vector<std::pair<int, int>> getLastFlippedPositions() const { return lastFlippedPositions; }
 	// ”Õ–Ê‚ðƒNƒŠƒA‚·‚é
 	void clear();
 	void flipDisks(int row, int col, int playerType);
