@@ -17,7 +17,7 @@ protected:
 public:
     Ai(int color) : Player(color) {}; // コンストラクタを追加
     bool getMove(Board& board) override; // 修正: 基底クラスの関数シグネチャに一致させる
-    int minimax(int depth, bool maximizingPlayer, int turnPlayer, int evalPlayerType);
+    int minimax(Board& board, int depth, bool maximizingPlayer, int turnPlayer, int evalPlayerType);
     // 盤面を評価
-    int evaluateBoard(int playerType);
+    int evaluateBoard(Board& board);
 }; 
