@@ -1,2 +1,12 @@
-﻿  main.cpp
-  osero.vcxproj -> C:\Users\shinp\source\repos\Shinp2\pair-app\x64\Debug\osero.exe
+﻿  Board.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\print(11): warning STL4038: The contents of <print> are available only with C++23 or later.
+  JsonIO.cpp
+C:\Users\shinp\source\repos\Shinp2\pair-app\osero\Board.cpp(7,23): error C2429: 言語機能 '構造化バインディング' にはコンパイラ フラグ '/std:c++17' が必要です
+C:\Users\shinp\source\repos\Shinp2\pair-app\osero\Board.cpp(8,15): error C2429: 言語機能 '構造化バインディング' にはコンパイラ フラグ '/std:c++17' が必要です
+C:\Users\shinp\source\repos\Shinp2\pair-app\osero\Board.cpp(45,14): error C2039: 'print': 'std' のメンバーではありません
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\string(23,1):
+      'std' の宣言を確認してください
+  
+C:\Users\shinp\source\repos\Shinp2\pair-app\osero\Board.cpp(45,14): error C3861: 'print': 識別子が見つかりませんでした
+  main.cpp
+  コードを生成中...

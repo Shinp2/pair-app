@@ -59,9 +59,6 @@
     <ClCompile Include="UiOut.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="JsonOut.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="Ai.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -69,6 +66,9 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="JsonIO.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>

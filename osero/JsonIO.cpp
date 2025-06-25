@@ -48,18 +48,19 @@ bool JsonIO::loadFromJsonForm()
         this->size = j["boardSize"];	
     }
     else {
-		size = 8; // デフォルトのボードサイズ
+		this->size = 8; // デフォルトのボードサイズ
     }
 
     board = std::make_unique<Board>(size, positions); // 初期配置を設定
     
     if (j.contains("flip")) {
         for(const auto& item : j["flip"]) {
+
             int row = item[0];
             int col = item[1];
+
             board->flipDisks(row, col);
 		}
-		
     }
 
     return true;

@@ -17,9 +17,10 @@ protected:
 	Player* currentPlayerPtr ;
 	std::unique_ptr<Board> board;
 	JsonIO jsonIO;
-	void changePlayer();
+
 	void endGame();
 public:
+	void changePlayer();
 	OseroGame(int size);
 	OseroGame(JsonIO json);
 	int checkGameOver();
@@ -27,6 +28,6 @@ public:
 	void goGame();
 	bool loadFromJsonForm();
 	void sendJsonForm();
-	void singleRun();
+	bool singleRun();
 	Board* getBoard() { return board.get(); }
 };

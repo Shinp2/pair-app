@@ -5,7 +5,7 @@ class Ai :
 {
 protected:
     // ミニマックス法の深さ制限
-    const int MAX_DEPTH = 5; // 深さを5に設定
+    const int MAX_DEPTH = 3; // 深さを5に設定
     // 評価関数の重み
     const int CORNER_WEIGHT = 1000;
     const int EDGE_WEIGHT = 500;

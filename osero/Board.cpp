@@ -1,41 +1,32 @@
-
 #include "Board.h"
+#include <print> // C++23のprint用
 
-//positionsを使用して、初期配置を設定する
-Board::Board(int _size, Positions positions):size(_size) {  
-    board.resize(_size, std::vector<int>(size, osero::NONE));  
-    for (const auto& pos : positions) {  
-        int playerType = std::get<0>(pos);  
-        int row = std::get<1>(pos).first;  
-        int col = std::get<1>(pos).second;  
-        board[row][col] = playerType;  
-    }  
+// positionsを使用して、初期配置を設定する
+Board::Board(int _size, Positions positions) : size(_size) {
+    board.resize(_size, std::vector<int>(size, osero::NONE));
+    for (const auto& [playerType, pos] : positions) { // 分解代入
+        auto [row, col] = pos;
+        board[row][col] = playerType;
+    }
 }
 
 bool Board::isLegalMove(int row, int col, int playerType)
 {
-    // playerType: BLACK or WHITE
-    std::vector<std::pair<int, int>> legalMoves;
     int opponent = (playerType == osero::BLACK) ? osero::WHITE : osero::BLACK;
-    // 8方向の探索
     for (int dir = 0; dir < 8; ++dir) {
         int nx = row + dx[dir];
         int ny = col + dy[dir];
         bool foundOpponent = false;
 
-
         while (nx >= 0 && nx < board.size() && ny >= 0 && ny < board.size()) {
-			// 違う色を見つけた場合
             if (board[nx][ny] == opponent) {
                 foundOpponent = true;
                 nx += dx[dir];
                 ny += dy[dir];
             }
-            // 違う色を見つけた後に同じ色を見つけた場合Trueを返す
             else if (board[nx][ny] == playerType && foundOpponent) {
                 return true;
             }
-            // 空のマスを見つけた場合
             else {
                 break;
             }
@@ -44,54 +35,47 @@ bool Board::isLegalMove(int row, int col, int playerType)
     return false;
 }
 
-
-// 石を置き、裏返し処理も行う
 void Board::placeStone(int row, int col, int playerType)
 {
-	// playerType: BLACK or WHITE
     if (board[row][col] == 0 && isLegalMove(row, col, playerType)) {
-        board[row][col] = playerType; // Place the disk
+        board[row][col] = playerType;
         flipDisks(row, col, playerType);
     }
     else {
-        std::cout << "error in osero.cpp class board in void placeStone(int row,int col,int playerType)!" << std::endl;
+        std::print("error in osero.cpp class board in void placeStone(int row,int col,int playerType)!\n");
     }
 }
 
-// 配置可能な場所を見つける
 std::vector<std::pair<int, int>> Board::getLegalMoves(int playerType)
 {
-
-    return std::vector<std::pair<int, int>>();
+    return {};
 }
 
-// 石の数を数える
 int Board::countStones(int playerType)
 {
-	int count = 0;
-    for(int i = 0; i < board.size(); ++i) {
-        for (int j = 0; j < board[i].size(); ++j) {
-            if (board[i][j] == playerType) {
+    int count = 0;
+    for (const auto& row : board) {
+        for (auto cell : row) {
+            if (cell == playerType) {
                 ++count;
             }
         }
-	}
+    }
     return count;
 }
 
-// 盤面をクリアする
 void Board::clear()
 {
-    for(int i = 0; i < board.size(); ++i) {
-        for (int j = 0; j < board[i].size(); ++j) {
-            board[i][j] = osero::NONE;
+    for (auto& row : board) {
+        for (auto& cell : row) {
+            cell = osero::NONE;
         }
-	}
+    }
 }
-// 石を置く処理と裏返し処理を行う
+
 void Board::flipDisks(int row, int col, int playerType)
 {
-    lastFlippedPositions.clear(); // 前回分をクリア
+    lastFlippedPositions.clear();
     int opponent = (playerType == osero::BLACK) ? osero::WHITE : osero::BLACK;
 
     for (int dir = 0; dir < 8; ++dir) {
@@ -108,7 +92,7 @@ void Board::flipDisks(int row, int col, int playerType)
         if (nx >= 0 && nx < board[0].size() && ny >= 0 && ny < board.size() && board[nx][ny] == playerType) {
             for (auto p : toFlip) {
                 board[p.first][p.second] = playerType;
-                lastFlippedPositions.push_back(p); // 裏返した位置を記録
+                lastFlippedPositions.push_back(p);
             }
         }
     }
@@ -116,7 +100,13 @@ void Board::flipDisks(int row, int col, int playerType)
 
 void Board::flipDisks(int row, int col)
 {
-	board[row][col] = (board[row][col] == osero::BLACK) ? osero::WHITE : osero::BLACK;
+    if (board[row][col] == osero::NONE) {
+        return;
+    }
+    else {
+        board[row][col] = (board[row][col] == osero::BLACK) ? osero::WHITE : osero::BLACK;
+        lastFlippedPositions.push_back({ row, col });
+    }
 }
 
 int Board::getCell(int row, int col)
@@ -126,5 +116,5 @@ int Board::getCell(int row, int col)
 
 void Board::setCell(int row, int col, int color)
 {
-	board[row][col] = color;
+    board[row][col] = color;
 }

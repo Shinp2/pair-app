@@ -20,7 +20,9 @@ OseroGame::OseroGame(JsonIO json)
     if (json.hasLastMoveSet()) {
 		currentPlayerPtr = player1.get(); // 初期プレイヤーをHumanに設定
         static_cast<Human*>(player1.get())->setLastMove(json.getLastMove());
-		
+    }
+    else {
+		currentPlayerPtr = player2.get(); // 初期プレイヤーをHumanに設定
     }
 	// unique_ptrを使用してBoardオブジェクトを受け取るコンストラクタ
 }
@@ -74,7 +76,7 @@ int OseroGame::checkGameOver()
     }
     else {
         changePlayer(); // プレイヤーを交代
-		return 1; // 続行
+		return 2; // 続行
     }
 
 }
@@ -85,16 +87,9 @@ void OseroGame::sendJsonForm() {
 }
 
 // 交互に１手ずつ実行する関数
-void OseroGame::singleRun() {
-    JsonIO json;
-    currentPlayerPtr = player1.get(); // 初期プレイヤー(Human)を設定
-    for(int i=0;i<2;i++) { // 2手分の処理を行う
-        if (!this->checkGameOver()) {
-            break; // ゲームオーバーならループを抜ける
-        }
-        currentPlayerPtr->getMove(*board);
-        changePlayer(); // プレイヤーを交代
-	}
+bool OseroGame::singleRun() {
+
+    return currentPlayerPtr->getMove(*board);
 };
 
 
